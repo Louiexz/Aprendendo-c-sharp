@@ -1,5 +1,5 @@
 using System;
-
+// Lendo inputs
 class Welcome
 {
     static void Main(string[] args)    {
@@ -11,18 +11,13 @@ class Welcome
         profissao=Console.ReadLine();
 
         Console.WriteLine("Seu salário: ");
-        salario=float.Parse(Console.ReadLine());
+        salario = (float.Parse(Console.ReadLine()));
 
         Console.WriteLine("Sua idade: ");
-        idade = Convert.ToFloat(Console.ReadLine());
+        idade = (int.Parse(Console.ReadLine()));
 
         Console.WriteLine("Sua profissão: {0}", profissao);
-        Console.WriteLine("\nSeu salário: {0,15:c}",salario);
-        Console.WriteLine("\nSua idade: {0}",idade);
-    }
-    void print{
-        Console.WriteLine(profissao);
-
-        return variavel;
+        Console.WriteLine("Seu salário: {0:c}",salario);
+        Console.WriteLine("Sua idade: {0:p}",idade);
     }
 }
