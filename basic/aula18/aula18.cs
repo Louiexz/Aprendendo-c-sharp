@@ -2,7 +2,9 @@ using System;
 
 class Aula18 {
     static char[,,] velha = new char[3, 3, 3];  // Criação do array 3D
-
+    
+    static Random random = new Random();
+    
     static void ExibirTabuleiro() {
         for (int linha = 0; linha < 3; linha++) {
             for (int coluna = 0; coluna < 3; coluna++) {
@@ -13,45 +15,31 @@ class Aula18 {
             Console.WriteLine("-------------");  // Linha divisória
         }
     }
-    static void Main() {
-        int jogada = 1;  // Inicializa a variável de contagem de jogadas
     
-        while (jogada <= 9) {
+    static void Main() {
+        int jogada = 0;  // Inicializa a variável de contagem de jogadas
+    
+        while (jogada < 9) {  // O jogo continua até 9 jogadas
+            int coluna, linha;
             // Alterna entre 'X' e 'O'
             char simbolo = (jogada % 2 == 0) ? 'O' : 'X';
             
-            input:
-            
-            try {
-                Console.WriteLine($"Jogador {simbolo}. Onde deseja jogar? Coluna: ");
-                int coluna = int.Parse(Console.ReadLine());
+            while (true){
+                coluna = random.Next(0, 3);
+                linha = random.Next(0, 3);
     
-                Console.WriteLine($"Jogador {simbolo}. Onde deseja jogar? Linha: ");
-                int linha = int.Parse(Console.ReadLine());
-    
-                // Verifica se as coordenadas estão dentro do intervalo válido
-                if (coluna < 1 || coluna > 3 || linha < 1 || linha > 3) {
-                    Console.WriteLine("Coordenadas inválidas! Tente novamente.");
-                    goto input;
+                if (velha[coluna, linha, 0] == '\0') {
+                    break;
                 }
     
-    
-                if (velha[coluna - 1, linha - 1, 0] != '\0') {
-                    Console.WriteLine("Posição já preenchida.");
-                    goto input;
-                }
-    
-                velha[coluna - 1, linha - 1, 0] = simbolo;
-    
-                jogada++;
-
-                Console.Clear();
-                
-                ExibirTabuleiro();
-            } catch (Exception) {
-                Console.WriteLine("Por favor. Digite apenas números inteiros.");
-                goto input;
             }
+            velha[coluna, linha, 0] = simbolo;
+
+            Console.Clear();
+            
+            ExibirTabuleiro();
+            
+            jogada++;
         }
     }
 }
