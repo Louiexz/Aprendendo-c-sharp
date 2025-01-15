@@ -1,8 +1,8 @@
 using System;
 
+// Parametros (params)
+
 class Aula27 {
-
-
     static float multiplicacao( out int quantidade, params float[] nums) {
         float res = nums[0];
         quantidade = nums.Length;

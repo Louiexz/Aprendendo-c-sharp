@@ -1,5 +1,5 @@
 using System;
-
+// Parametros: (ref)
 class Aula26 {
     static string Pessoa(string nome, out string reino){
         reino = "Mammalia";

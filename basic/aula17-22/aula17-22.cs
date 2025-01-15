@@ -1,4 +1,5 @@
 using System;
+// Array e Loop: Foreach
 
 class AulasDezesseteVinteDois {
   static void Main() {

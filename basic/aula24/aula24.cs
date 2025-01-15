@@ -1,4 +1,5 @@
 using System;
+// Métodos
 
 class Aula25 {
     static void ProfissaoInput(string profissao){

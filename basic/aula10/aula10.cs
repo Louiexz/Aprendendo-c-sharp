@@ -1,5 +1,5 @@
 using System;
-// Necessários para criar tipos personalizados com valores predefinidos
+// Enum: necessários para criar tipos personalizados com valores predefinidos
 class Aula10 {
     enum FimDeSemana{Sabado, Domingo};
 

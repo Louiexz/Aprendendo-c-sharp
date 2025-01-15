@@ -1,6 +1,7 @@
 using System;
 
 class Pessoa{
+    // Uso classes, construtores e sua sobrecarga
     protected string nome;
     private string senha;
 
