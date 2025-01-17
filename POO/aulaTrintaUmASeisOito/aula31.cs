@@ -2,7 +2,7 @@ using System;
 
 // Herança
 // Escopo e variáveis: protected, static, private, this
-
+// Métodos: sobrescrita e virtuais
 
 class Pessoa { // Classe base
     protected string nome;
@@ -32,7 +32,7 @@ class Pessoa { // Classe base
         return this.senha;
     }
 
-    public override string ToString() {
+    virtual public string ToString() {
         // Usar senha apenas internamente na classe
         return $"Seu nome: {nome},\nSua senha: {senha}.";
     }
