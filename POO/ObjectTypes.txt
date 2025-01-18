@@ -1,0 +1,20 @@
+Struct
+
+A struct in C# is a value type, meaning it is stored directly in memory and is copied when assigned
+or passed to a method. structs are typically used for small, lightweight objects where performance
+and memory efficiency are critical.
+
+
+Class
+
+A class is a reference type. When you create an instance of a class, you're working with a reference
+to an object in memory. classes are the most commonly used type in object-oriented programming.
+
+
+Record
+
+A record is a reference type that is immutable by default and designed for scenarios where you want
+to model data that should be compared by value, not by reference. records are commonly used for immutable
+data structures.
+
+public record Point(int X, int Y);
