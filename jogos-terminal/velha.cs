@@ -24,10 +24,10 @@ class JogoDaVelha {
             
             try {
                 Console.WriteLine($"Jogador {simbolo}. Onde deseja jogar? Coluna: ");
-                int coluna = int.Parse(Console.ReadLine());
+                int coluna = Convert.ToInt32(Console.ReadLine());
     
                 Console.WriteLine($"Jogador {simbolo}. Onde deseja jogar? Linha: ");
-                int linha = int.Parse(Console.ReadLine());
+                int linha = Convert.ToInt32(Console.ReadLine());
     
                 // Verifica se as coordenadas estão dentro do intervalo válido
                 if (coluna < 1 || coluna > 3 || linha < 1 || linha > 3) {
